@@ -28,7 +28,7 @@ $this->registerJsFile('@web/js/item-index.js', ['position' => View::POS_END]);
                         }?>
                     </div>
                 </div>
-                <div style="">
+                <div class="div-about">
                     <h2 class="lead-text">Описание</h2>
                     <div style="text-align: left">
                         <p><?= $model->description?></p>
