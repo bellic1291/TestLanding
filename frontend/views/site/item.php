@@ -9,7 +9,6 @@ use yii\bootstrap\Alert;
 $this->title = $model->name;
 $this->registerJsFile('@web/js/item-index.js', ['position' => View::POS_END]);
 ?>
- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
  <div class="site-item">
     <div class="body-content">
         <div class="row">
@@ -26,28 +25,24 @@ $this->registerJsFile('@web/js/item-index.js', ['position' => View::POS_END]);
                                         ]);  
                                     }
                                 }
-                              }
-                        ?>
+                        }?>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 10px; background-color: #f8f8f8; border: 1px solid #e7e7e7; padding: 0 15px 10px;">
+                <div style="">
                     <h2 class="lead-text">Описание</h2>
                     <div style="text-align: left">
                         <p><?= $model->description?></p>
                     </div>
                 </div>
             </div>
-            
-
-            
+              
             <div class="col-md-7">
                 <div style="text-align: center; margin-bottom: 25px;"><h2 class="lead-text">Характеристики:</h2></div>
                 <p>
                     <?= $model->characteristics?>
                 </p>
                 <?= Html::tag('button', 'Выбрать разновидность <small><span class="glyphicon glyphicon-menu-down"></span></small>', [
-                    'class' => 'btn btn-lg btn-default collapsed',
-                    'style' => 'width: 100%; border-radius: 0; margin-top: 10px;',
+                    'class' => 'btn btn-lg btn-default collapsed btn-collapse',
                     'data-toggle' => 'collapse',
                     'data-target' => '#vr-div',
                 ])?>

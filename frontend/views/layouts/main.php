@@ -42,7 +42,7 @@ AppAsset::register($this);
             'class' => 'navbar-default navbar-fixed-top',
         ],
     ]);
-    //Pjax::begin(['id' => 'tooltip']);
+
     $menuItems = [
         ['label' => 'Товары', 'url' => '/', 'options' => ['data-pjax' => '0']],
         ['label' => 'Доставка', 'options' => ['data-pjax' => '0']],
@@ -56,11 +56,10 @@ AppAsset::register($this);
             'options' => ['style' => 'text-decoration: underline', 'class' => 'pull-right tooltip', 'id' => 'tooltip'],
         ],
     ];
-    //Pjax::end();
     
     Pjax::begin(['id' => 'tooltip', 'linkSelector' => '.btn-card .span-grid .btn-clear']);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav', 'data-pjax' => '0'],
+        'options' => ['class' => 'navbar-nav'],
         'items' => $menuItems,
     ]);
     Pjax::end();

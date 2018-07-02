@@ -44,6 +44,14 @@ display: inline-block;
     overflow: hidden;
 }
 
+.div-about {
+    text-align: center; 
+    margin-top: 10px; 
+    background-color: #f8f8f8; 
+    border: 1px solid #e7e7e7;
+    padding: 0 15px 10px;
+}
+
 .flex-div {
     display: flex; 
     flex-direction: column;
@@ -75,6 +83,12 @@ display: inline-block;
 .btn-cart {
     background-color: #479e47;
     color: #edffe0;
+}
+
+.btn-collapse {
+    width: 100%; 
+    border-radius: 0; 
+    margin-top: 10px;
 }
 
 .tooltip {
