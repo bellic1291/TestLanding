@@ -3,19 +3,13 @@
 namespace frontend\models;
 
 use Yii;
-use yii\base\Model;
 
 /**
  * ContactForm is the model behind the contact form.
  */
-class ContactForm extends Model
+class ContactForm extends \yii\db\ActiveRecord
 {
-    public $name;
-    public $email;
-    public $subject;
-    public $body;
     public $verifyCode;
-
 
     /**
      * {@inheritdoc}
@@ -23,31 +17,42 @@ class ContactForm extends Model
     public function rules()
     {
         return [
-            // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
-            // email has to be a valid email address
-            ['email', 'email'],
-            // verifyCode needs to be entered correctly
-            ['verifyCode', 'captcha'],
+            [['name', 'address'], 'required', 'message' => 'Это обязательное поле'],
+            [['description', 'phone'], 'string'],
+            ['email', 'email', 'message' => 'Это не электронная почта'],
+            ['verifyCode', 'captcha', 'message' => 'Вы ввели неправильные символы с картинки'],
         ];
     }
-
-    /**
-     * {@inheritdoc}
-     */
+    
+    public static function tableName()
+    {
+        return 'request';
+    }
+    
+    public function beforeValidate()
+    {
+        if (empty($this->email) && empty($this->phone))
+        {
+            $this->addError('email');
+            $this->addError('phone', 'Одно из полей должно быть заполнено');
+            return false;            
+        }
+        return true;        
+    }
+    
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
+            'name' => 'Имя',
+            'address' => 'Адрес',
+            'email' => 'Эл. почта',
+            'phone' => 'Телефон',
+            'description' => 'Комментарий',
+            'verifyCode' => 'Введите символы',
         ];
     }
+    
 
-    /**
-     * Sends an email to the specified email address using the information collected by this model.
-     *
-     * @param string $email the target email address
-     * @return bool whether the email was sent
-     */
     public function sendEmail($email)
     {
         return Yii::$app->mailer->compose()

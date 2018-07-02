@@ -1,0 +1,201 @@
+html,
+
+.navbar-center > ul > li {
+float: none;
+/** text-align: center; */
+}
+
+.navbar-nav {
+    float: none !important;
+}
+
+.navbar-nav li {
+float: none;
+display: inline-block;
+}
+
+.item-img {
+    max-width: 70%;
+    height: auto;
+}
+
+.vr-img {
+    width: inherit;
+    height: auto;
+}
+
+.vr-img-btn {
+    margin-bottom: 5px;
+    width: 65px !important;
+    height: 65px !important;
+    border: 1px solid #e7e7e7;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.vr-img-btn:focus, .vr-img-btn:active {
+    box-shadow: 0 0 7px 2px #a0a0a0;
+    outline-color: transparent !important;
+}
+
+.vr-grid-div {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.flex-div {
+    display: flex; 
+    flex-direction: column;
+}
+
+.span-grid {
+    cursor: pointer;
+}
+
+.lead-text {
+    color: #696969 !important;
+}
+
+.footer {
+    min-height: 60px;
+    background-color: #404040;
+    color: #909090;
+}
+
+.footer > .container > p {
+    text-align: left;
+}
+
+.footer > .container > p > span {
+    font-size: 20px !important;
+    color: #c7c7c7;
+}
+
+.btn-cart {
+    background-color: #479e47;
+    color: #edffe0;
+}
+
+.tooltip {
+    display: inline-block;
+    border-bottom: 1px dotted #ccc;
+    color: #006080;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext {
+    font-size: 14px;
+    visibility: hidden;
+    cursor: default;
+    position: absolute;
+    width: 200px;
+    height: 156px;
+    background-color: #404040;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: left;
+    
+    top: 90%;
+    left: 5%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #404040;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1 !important;
+}
+
+.btn-tooltip {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.a-tooltip {
+    text-align: center;
+    color: #fff;
+}
+
+div.field-contactform-email label:after, 
+div.field-contactform-phone label:after,
+span.spn-green:before {
+    content: " *";
+    color: #00b520;
+}
+
+div.required label:after,
+span.spn-red:before {
+    content: " *";
+    color: red;
+}
+
+.contact-info {
+    text-align: left; 
+    font-size: 16px; 
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center; 
+}
+
+.captcha-img {
+    padding: 0;
+    width: auto;
+}
+
+.captcha-input {
+    padding-left: 0;
+}
+
+.index-img {
+    max-height: 250px;
+}
+
+.index-img-cont {
+    display: flex;
+    justify-content: center;
+    height: 250px !important;
+}
+
+.div-index-header {
+    height: 87px;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.div-index-col {
+    text-align: center;
+    border: 0.5px solid #e7e7e7;
+    padding:  0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.div-index-col:hover {
+    box-shadow: 0 0 10px 4px #bdbdbd;
+    z-index: 2;
+}
+
+.glyphicon-ruble {
+    color: #cd5c5c;
+}

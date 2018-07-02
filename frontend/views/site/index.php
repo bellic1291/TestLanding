@@ -1,53 +1,38 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\helpers\Html;
+use yii\web\View;
 
 $this->title = 'My Yii Application';
+$this->registerJsFile('@web/js/index.js', ['position' =>View::POS_END]);
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p>Это небольшой интернет-магазин, написанный в качестве тестового задания для motoya. В navbar работает только корзина и товары.</p>
+        <p><a href="https://github.com/bellic1291/TestLanding">Исходный код</a> добавил на GitHub для удобства.</p>
     </div>
 
     <div class="body-content">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+        <div class="row div-flex-centered">
+            
+                <?php foreach ($models as $model) {
+                    echo Html::beginTag('div', ['class' => 'col-lg-3 div-index-col', 'id' => $model->id]);
+                    
+                        echo Html::beginTag('div', ['class' => 'div-index-header']);
+                            echo Html::tag('h4',$model->name);
+                        echo Html::endTag('div');
+                        
+                        echo Html::tag('div', Html::tag('div', Html::img('@web/'.$model->photo_path, ['class' => 'index-img']), ['class' => 'index-img-cont']), ['class' => []]);
+                        
+                        echo Html::beginTag('div', []);
+                            echo Html::tag('h4', 'От '.$model->getLowerPrice(). '<small>'.Html::tag('span', null, ['class' => 'glyphicon glyphicon-ruble']).'</small>');
+                        echo Html::endTag('div');
+                           
+                    echo Html::endTag('div');
+                }?>       
         </div>
-
     </div>
 </div>

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "86b50b4a1e66fd59881856bdba61f332",
-    "content-hash": "630d5f1d19e73b0163f900453171fba5",
+    "hash": "dbe68fb0b7cde38ce5f5dfa5263e1bb9",
+    "content-hash": "460827be8a02919f60efdb72b4bd7c5a",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -169,6 +169,53 @@
             "time": "2017-07-16 21:13:23"
         },
         {
+            "name": "devanych/yii2-cart",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devanych/yii2-cart.git",
+                "reference": "735f37d0b6c52d01283b3b3b539518fae319f05f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devanych/yii2-cart/zipball/735f37d0b6c52d01283b3b3b539518fae319f05f",
+                "reference": "735f37d0b6c52d01283b3b3b539518fae319f05f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "devanych\\cart\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Evgeniy Zyubin",
+                    "email": "info@zyubin.com",
+                    "homepage": "https://zyubin.ru"
+                }
+            ],
+            "description": "Shopping cart for Yii2",
+            "keywords": [
+                "yii2",
+                "yii2-cart",
+                "yii2-extension",
+                "yii2-shopping-cart"
+            ],
+            "time": "2018-06-25 22:50:21"
+        },
+        {
             "name": "doctrine/lexer",
             "version": "v1.0.1",
             "source": {
@@ -325,6 +372,57 @@
                 "html"
             ],
             "time": "2018-02-23 01:58:20"
+        },
+        {
+            "name": "mihaildev/yii2-ckeditor",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MihailDev/yii2-ckeditor.git",
+                "reference": "d20aa7f6bcf610fee226d6eb15212a279875bf87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MihailDev/yii2-ckeditor/zipball/d20aa7f6bcf610fee226d6eb15212a279875bf87",
+                "reference": "d20aa7f6bcf610fee226d6eb15212a279875bf87",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mihaildev\\ckeditor\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Mihail",
+                    "email": "mihail.kucher@gmail.com",
+                    "homepage": "https://github.com/MihailDev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 CKEditor",
+            "homepage": "https://github.com/MihailDev/yii2-ckeditor",
+            "keywords": [
+                "CKEditor",
+                "editor",
+                "wysiwyg",
+                "yii"
+            ],
+            "time": "2014-11-19 22:04:08"
         },
         {
             "name": "swiftmailer/swiftmailer",
